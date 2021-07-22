@@ -1,0 +1,586 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bottomnavbar.ManfaatBuah"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logo_app"
+                android:layout_margin="30dp"
+                android:layout_gravity="center"/>
+
+            <!--Card 1-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card1"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_apple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/apel"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_apple"
+                        android:layout_marginStart="75dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_apel"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/apple_cover"
+                    android:layout_marginStart="10dp"/>
+
+
+            </RelativeLayout>
+
+            <!--Card 2-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card2"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_avocado"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/alpuket"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_avocado"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_alpukat"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/avocado_cover"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </RelativeLayout>
+
+            <!--Card 3-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card3"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_pitaya"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/naga"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_pitaya"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_naga"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="90dp"
+                    android:layout_height="150dp"
+                    android:src="@drawable/dragon_fruit_cover"
+                    android:layout_marginStart="10dp"/>
+
+
+            </RelativeLayout>
+
+            <!--Card 4-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card4"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_banana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/pisang"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_banana"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_pisang"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="190dp"
+                    android:src="@drawable/banana_cover"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </RelativeLayout>
+
+            <!--Card 5-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card5"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_waterm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/semangka"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_waterm"
+                        android:layout_marginStart="80dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_semangka"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/watermelons_cover"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="38dp"/>
+
+
+            </RelativeLayout>
+
+            <!--Card 6-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card6"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_star"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/blimbing"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_star"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_belimbing"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/star_fruit_cover"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="15dp"/>
+
+            </RelativeLayout>
+
+            <!--Card 7-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card7"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_bluberi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/bluberi"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_bluberi"
+                        android:layout_marginStart="90dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_bluberi"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:src="@drawable/blueberry_cover"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="40dp"/>
+
+
+            </RelativeLayout>
+
+
+            <!--Card 8-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card8"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_orange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/jeruk"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_orange"
+                        android:layout_marginStart="40dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_jeruk"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/orange_cover"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="38dp"
+                    android:layout_alignParentEnd="true"/>
+
+
+            </RelativeLayout>
+
+            <!--Card 9-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card9"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_grape"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/anggur"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_grape"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_anggur"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/grape_cover"
+                    android:layout_marginTop="35dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="7dp"/>
+
+            </RelativeLayout>
+
+            <!--Card 10-->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp">
+
+                <RelativeLayout
+                    android:id="@+id/menu_color_card10"
+                    android:layout_width="330dp"
+                    android:layout_height="145dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginBottom="2dp"
+                    android:background="@drawable/card_piece_read">
+
+                    <TextView
+                        android:id="@+id/tv_pineapple"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:fontFamily="@font/bold"
+                        android:text="@string/nanas"
+                        android:textColor="@color/white"
+                        android:textSize="30sp" />
+
+                    <TextView
+                        android:layout_width="230dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_pineapple"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="3dp"
+                        android:fontFamily="@font/reguler"
+                        android:text="@string/manfaat_nanas"
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="70dp"
+                    android:layout_height="140dp"
+                    android:src="@drawable/nanas_cover"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="10dp"/>
+
+
+            </RelativeLayout>
+
+            <android.widget.Button
+                android:id="@+id/btn_read"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:background="@drawable/skin_button"
+                android:layout_gravity="center"
+                android:layout_marginTop="38dp"
+                android:layout_marginBottom="40dp"
+                android:text="@string/back_shop"
+                android:elevation="20dp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
