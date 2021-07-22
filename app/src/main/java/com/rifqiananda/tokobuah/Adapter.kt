@@ -2,29 +2,24 @@ package com.rifqiananda.tokobuah
 
 import android.content.Context
 import android.content.Intent
-import android.graphics.BlendMode
-import android.graphics.BlendModeColorFilter
-import android.graphics.PorterDuff
-import android.os.Build
+import android.graphics.Bitmap
+import android.graphics.drawable.Drawable
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.RelativeLayout
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
-import androidx.core.graphics.BlendModeColorFilterCompat
-import androidx.core.graphics.BlendModeCompat
+import androidx.core.graphics.drawable.toBitmap
+import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.RecyclerView
 import com.rifqiananda.tokobuah.bottomnavbar.DetailBuah
-import kotlinx.android.synthetic.main.recycler_view_template.view.*
-import java.util.ArrayList
+import java.util.*
+
 
 class Adapter(private val context: Context, private val data: ArrayList<Buah>): RecyclerView.Adapter<Adapter.BuahViewHolder>(){
-
-    private var imgView : ImageView? = null
-    private var txtName : TextView? = null
-    private var txtPrice : TextView? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Adapter.BuahViewHolder {
         return BuahViewHolder(
@@ -35,94 +30,57 @@ class Adapter(private val context: Context, private val data: ArrayList<Buah>): 
     }
 
 
-    override fun onBindViewHolder(holder: Adapter.BuahViewHolder, position: Int) {
-        holder.bind(data[position])
+    override fun onBindViewHolder(holder: Adapter.BuahViewHolder, position: Int) = holder.bind(data[position])
 
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q)
-        {
-            if (position == 0)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.red_apple), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.red_apple), BlendMode.SRC_IN)
-            }
-            else if (position == 1)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.red_dragon), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.red_dragon), BlendMode.SRC_IN)
-            }
-            else if (position == 2)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.orange_pinapple), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.orange_pinapple), BlendMode.SRC_IN)
-            }
-            else if (position == 3)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.orange_orange), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.orange_orange), BlendMode.SRC_IN)
-            }
-            else if (position == 4)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.yellow_banana), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.yellow_banana), BlendMode.SRC_IN)
-            }
-            else if (position == 5)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.yellow_star), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.yellow_star), BlendMode.SRC_IN)
-            }
-            else if (position == 6)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.green_avocado), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.green_avocado), BlendMode.SRC_IN)
-            }
-            else if (position == 7)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.green_wm), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.green_wm), BlendMode.SRC_IN)
-            }
-            else if (position == 8)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.blue_blueberry), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.blue_blueberry), BlendMode.SRC_IN)
-            }
-            else if (position == 9)
-            {
-                holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.pruple_grape), BlendMode.SRC_IN)
-                holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.pruple_grape), BlendMode.SRC_IN)
-            }
-            else
-            {
-                if (position == 0)
-                {
-                    holder.itemView.color_card1.setBackgroundResource(R.color.red_apple)
-                    holder.itemView.color_card2.setBackgroundResource(R.color.red_apple)
+    override fun getItemCount() = data.size
+
+    inner class BuahViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
+        private val imgView : ImageView = itemView.findViewById(R.id.image_view)
+        private val txtName : TextView = itemView.findViewById(R.id.txt_name)
+        private val txtPrice : TextView = itemView.findViewById(R.id.txt_price)
+
+        private val btnDetail : ImageView = itemView.findViewById(R.id.btn_detail)
+        private val cardContainer :RelativeLayout = itemView.findViewById(R.id.color_card1)
+        private val cardPriceContainer : RelativeLayout = itemView.findViewById(R.id.color_card2)
+
+        private fun getDominantColor(bitmap: Bitmap){
+            Palette.Builder(bitmap).generate { p ->
+                val dominantColor = p?.getDominantColor(ContextCompat.getColor(context, R.color.pruple_grape))
+                dominantColor?.let { color ->
+                    setBackgroundDrawableInPriceColor(color)
+                    setBackgroundDrawableColor(color)
                 }
-                else if (position == 1)
-                {
-                    holder.itemView.color_card1.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.red_dragon), BlendMode.SRC_IN)
-                    holder.itemView.color_card2.background.colorFilter = BlendModeColorFilter(ContextCompat.getColor(context,R.color.red_dragon), BlendMode.SRC_IN)
-                }
+            }
+
+        }
+
+        private fun setBackgroundDrawableColor(colorId: Int){
+            val drawable : Drawable = cardContainer.background
+            // idk why, but from my perspective, it should be a ShapeDrawable.
+            // but android detects it as GradientDrawable
+            if(drawable is GradientDrawable){
+                drawable.setColor(colorId)
             }
         }
-    }
 
-    override fun getItemCount(): Int {
-        return data.size
-    }
-
-    inner class BuahViewHolder(item: View): RecyclerView.ViewHolder(item){
-
-        private val btnDetail : ImageView = item.findViewById(R.id.btn_detail)
+        private fun setBackgroundDrawableInPriceColor(colorId: Int){
+            val drawable = cardPriceContainer.background
+            if(drawable is GradientDrawable){
+                drawable.setColor(colorId)
+            }
+        }
 
         fun bind(data: Buah)
         {
-            imgView = itemView.findViewById(R.id.image_view)
-            txtName = itemView.findViewById(R.id.txt_name)
-            txtPrice = itemView.findViewById(R.id.txt_price)
 
-            imgView?.setImageResource(data.imgView)
-            txtName?.text = data.txtName
-            txtPrice?.text = data.txtPrice
+
+            imgView.setImageResource(data.imgView)
+
+            //put getDominantCOlor func below imgView.set....
+            getDominantColor(imgView.drawable.toBitmap())
+
+            txtName.text = data.txtName
+            txtPrice.text = data.txtPrice
 
             btnDetail.setOnClickListener {
                 val model = data
